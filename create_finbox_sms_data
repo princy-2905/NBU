@@ -1,6 +1,6 @@
 --staging table create query
 
-Drop table stg_finbox_sms_data;
+Drop table nbu.stg_finbox_sms_data;
 create  table  nbu.stg_finbox_sms_data (
 
 customer_id varchar(30)  ENCODE lzo ,   
