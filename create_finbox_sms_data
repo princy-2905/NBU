@@ -22,8 +22,9 @@ TIMEFORMAT 'auto';
 
 -- load data into main table
 
-truncate table finbox ;
-INSERT INTO finbox 
+
+
+create table finbox_sms_data as 
 SELECT 
 CAST(customer_id as varchar(50)),
 CAST(request_id as varchar(50)),
