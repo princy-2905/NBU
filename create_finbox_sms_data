@@ -24,7 +24,7 @@ TIMEFORMAT 'auto';
 
 
 
-create table finbox_sms_data as 
+create table nbu.finbox_sms_data as 
 SELECT 
 CAST(customer_id as varchar(50)),
 CAST(request_id as varchar(50)),
