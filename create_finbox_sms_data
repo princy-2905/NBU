@@ -1,7 +1,7 @@
 --staging table create query
 
 Drop table stg_finbox_sms_data;
-create  table  stg_finbox_sms_data (
+create  table  nbu.stg_finbox_sms_data (
 
 customer_id varchar(30)  ENCODE lzo ,   
 
@@ -15,7 +15,7 @@ data varchar(MAX)  ENCODE lzo
 
 --  load data into staging table
 
-COPY  stg_finbox_sms_data FROM  's3://angelone-nbu/finbox/'
+COPY  nbu.stg_finbox_sms_data FROM  's3://angelone-nbu/finbox/'
 IAM_ROLE 'arn:aws:iam::555445901246:role/analytics-redshift-glue-role'
 JSON 'auto'
 TIMEFORMAT 'auto';
